@@ -1,0 +1,215 @@
+*
+    box-sizing: border-box
+
+@font-face 
+    font-family: "RobotoT" 
+    src: url('../founts/RobotoT-Regular.ttf')
+    font-weight: 500
+    font-style: normal
+
+html
+    font-family: "RobotoT"
+    font-weight: 500
+
+@mixin botton
+    position: relative
+    
+    z-index: 2
+    width: 407px
+    height: 65px
+    border-color: #033356
+    border-style: solid
+    border-width: 4px
+    border-radius: 1000px
+    background-color: rgba(28,28,28,0)
+    display: block
+    text-align: center
+    overflow: hidden
+@mixin botton-text
+    text-decoration: none
+    font-style: normal
+    font-weight: 650
+    font-size: 28px
+    line-height: 38px
+    color: #FFFCFC !important
+
+.conteiner
+    max-width: 1000px
+    margin: 0 auto
+    z-index: -2
+.section
+    position: relative
+    min-height: 870px
+    background: url('../img/foto-fon3.png')
+    &__position
+        position: relative
+    &__language-move
+        display: flex
+        flex-direction: row
+        position: absolute
+        top: 30px
+        left: 700px
+    &__buttons-language
+        position: relative
+        z-index: 2
+        width: 50px
+        height: 50px
+        border-radius: 30px
+        border-style: none
+        background-color: rgba(28,28,28,0)
+        display: block
+        text-align: center
+        overflow: hidden
+        margin-right: 28px
+        margin-left: 23px
+        &:last-child
+            margin-right: 0px
+
+    &__a
+        text-decoration: none 
+        color: #FFFCFC !important
+        font-style: normal
+        font-weight: 700
+        font-size: 28px
+        line-height: 33px
+        color: #FFFFFF
+        
+    &__logo
+        z-index: 10
+        padding-top: 23px
+        display: block
+        margin: 0 auto
+        position: absolute
+        top: 10px
+        left: 456px
+        animation-name: rocat
+        animation-duration: 2.5s
+        animation-direction: alternate-reverse
+    &__h1
+        padding-top: 196px
+        font-style: normal
+        font-weight: 500
+        font-size: 62px
+        line-height: 73px
+        text-align: center
+        color: #FFFFFF
+    &__button-conteiner
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin: 54px 150px 52px 150px
+    &__buttons
+        position: relative
+        z-index: 2
+        width: 177px
+        height: 65px
+        border-color: #033356
+        border-style: solid
+        border-width: 5px
+        border-radius: 1000px
+        background-color: rgba(28,28,28,0)
+        display: block
+        text-align: center
+        overflow: hidden
+    &__text-button
+        text-decoration: none
+        font-style: normal
+        font-weight: 650
+        font-size: 30px
+        line-height: 38px
+        color: #FFFCFC !important
+    &__text-button1
+        text-decoration: none
+        font-style: normal
+        font-weight: 650
+        font-size: 26px
+        line-height: 38px
+        color: #FFFCFC !important
+    &__text1
+        text-align: center
+        font-style: normal
+        font-weight: 400
+        font-size: 34px
+        line-height: 40px
+        color: #FFFFFF
+    &__text2
+        padding-top: 32px
+        text-align: center
+        font-style: normal
+        font-weight: 300
+        font-size: 28px
+        line-height: 33px
+        color: #FFFFFF
+    &__left-wrapper
+        position: relative
+        
+    &__text3
+        position: absolute
+        left: 150px
+        padding-top: 32px
+        font-style: normal
+        font-weight: 500
+        font-size: 28px
+        line-height: 33px
+        color: #FFFFFF
+    &__icons-conteiner
+        position: absolute
+        left: 147px
+        padding-top: 110px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 298px
+    &__big-line
+        position: absolute
+        top: 40px 
+        left: 500px
+    &__right-wrapper
+        position: relative
+        margin-left: 465px
+        
+    &__text4
+        margin-left: 100px
+        margin-bottom: 42px
+        padding-top: 32px
+        font-style: normal
+        font-weight: 500
+        font-size: 28px
+        line-height: 33px
+        color: #FFFFFF
+    &__buttons-email
+        @include botton
+        margin-left: 100px
+    &__text-button-email
+        @include botton-text
+    
+.section__buttons:hover
+    background: #033356
+    transition: 0.5s
+.section__buttons-language:hover
+    background: #033356
+    
+    transition: 0.3s
+    
+
+.section__buttons-email::before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    border-radius: 30px
+    background: #033356
+    left: -100%
+    top: -0.5%
+    transition: 0.3s
+    z-index: -1
+.section__buttons-email:hover::before
+    left: 0
+@keyframes rocat
+    0%
+        top: 0
+        
+    100%
+        top: 800px
+        
+
